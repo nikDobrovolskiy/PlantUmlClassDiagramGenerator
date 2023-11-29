@@ -113,6 +113,69 @@ namespace PlantUmlClassDiagramGeneratorTest
             Console.Write(actual);
             Assert.AreEqual(expected, actual);
         }
+        
+        [TestMethod]
+        public void NullableTestNullableCustomTypes()
+        {
+            var code = File.ReadAllText(Path.Combine("testData", "NullableCustomType.cs"));
+            var tree = CSharpSyntaxTree.ParseText(code);
+            var root = tree.GetRoot();
+
+            var output = new StringBuilder();
+            using (var writer = new StringWriter(output))
+            {
+                var gen = new ClassDiagramGenerator(writer, "    ", Accessibilities.Private | Accessibilities.Internal
+                                                                                            | Accessibilities.Protected | Accessibilities.ProtectedInternal);
+                gen.Generate(root);
+            }
+
+            var expected = ConvertNewLineCode(File.ReadAllText(Path.Combine("uml", "nullableCustomType.puml")), Environment.NewLine);
+            var actual = output.ToString();
+            Console.Write(actual);
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod]
+        public void NullableTestNullableAndNotNullableTypes()
+        {
+            var code = File.ReadAllText(Path.Combine("testData", "NullableAndNotNullableType.cs"));
+            var tree = CSharpSyntaxTree.ParseText(code);
+            var root = tree.GetRoot();
+
+            var output = new StringBuilder();
+            using (var writer = new StringWriter(output))
+            {
+                var gen = new ClassDiagramGenerator(writer, "    ", Accessibilities.Private | Accessibilities.Internal
+                                                                                            | Accessibilities.Protected | Accessibilities.ProtectedInternal);
+                gen.Generate(root);
+            }
+
+            var expected = ConvertNewLineCode(File.ReadAllText(Path.Combine("uml", "nullableAndNotNullableType.puml")), Environment.NewLine);
+            var actual = output.ToString();
+            Console.Write(actual);
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod]
+        public void NullableTestNullableAndNotNullableCustomTypes()
+        {
+            var code = File.ReadAllText(Path.Combine("testData", "NullableAndNotNullableCustomType.cs"));
+            var tree = CSharpSyntaxTree.ParseText(code);
+            var root = tree.GetRoot();
+
+            var output = new StringBuilder();
+            using (var writer = new StringWriter(output))
+            {
+                var gen = new ClassDiagramGenerator(writer, "    ", Accessibilities.Private | Accessibilities.Internal
+                                                                                            | Accessibilities.Protected | Accessibilities.ProtectedInternal);
+                gen.Generate(root);
+            }
+
+            var expected = ConvertNewLineCode(File.ReadAllText(Path.Combine("uml", "nullableAndNotNullableCustomType.puml")), Environment.NewLine);
+            var actual = output.ToString();
+            Console.Write(actual);
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
         public void GenerateTestAtPrefixType()

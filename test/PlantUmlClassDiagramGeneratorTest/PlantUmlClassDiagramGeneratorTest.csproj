@@ -24,6 +24,9 @@
     <Compile Remove="testData\GenericsType.cs" />
     <Compile Remove="testData\InputClasses.cs" />
     <Compile Remove="testData\CurlyBrackets.cs" />
+    <Compile Remove="testData\NullableAndNotNullableCustomType.cs" />
+    <Compile Remove="testData\NullableAndNotNullableType.cs" />
+    <Compile Remove="testData\NullableCustomType.cs" />
     <Compile Remove="testData\NullableType.cs" />
     <Compile Remove="testData\RecordType.cs" />
   </ItemGroup>
@@ -48,6 +51,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="testData\CurlyBrackets.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="testData\NullableAndNotNullableCustomType.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="testData\NullableAndNotNullableType.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="testData\NullableCustomType.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="testData\NullableType.cs">
@@ -84,6 +96,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="uml\CurlyBrackets.puml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="uml\nullableCustomType.puml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="uml\nullableAndNotNullableCustomType.puml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="uml\nullableAndNotNullableType.puml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="uml\RecordType.puml">

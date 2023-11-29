@@ -1,0 +1,9 @@
+@startuml
+class NullableCustomType {
+    + NullableType : CustomType? <<get>> <<set>>
+}
+class CustomType {
+    + Name : string <<get>> <<set>>
+}
+NullableCustomType --> "NullableType" CustomType
+@enduml

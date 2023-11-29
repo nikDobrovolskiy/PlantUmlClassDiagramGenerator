@@ -1,0 +1,6 @@
+@startuml
+class NullableAndNotNullableType {
+    + NotNullableLong : long
+    + NullableLong : long?
+}
+@enduml
